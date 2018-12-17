@@ -1,13 +1,12 @@
-import React from "react";
 import "./ImageGrid.css";
+import React from "react";
+import ImageCard from "./ImageCard";
 
-const ImageGrid = ({ images }) => {
-  const imageGallery = images.map(image => {
-    return (
-      <img src={image.urls.regular} alt={image.description} key={image.id} />
-    );
+const ImageGrid = props => {
+  const images = props.images.map(image => {
+    return <ImageCard key={image.id} image={image} />;
   });
-  return <div className="image-grid">{imageGallery}</div>;
+  return <div className="image-grid">{images}</div>;
 };
 
 export default ImageGrid;

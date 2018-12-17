@@ -24,9 +24,7 @@ class App extends React.Component {
     return (
       <div className="ui container">
         <ImageSearch onFormSubmit={this.onFormSubmit} />
-        <div className="image-grid">
-          <ImageGrid images={this.state.images} />
-        </div>
+        <ImageGrid images={this.state.images} />
       </div>
     );
   }
